@@ -9,6 +9,10 @@ I am currently working on the version 2.0 of ROPGenerator which implies rewritin
 
 If you are curious you can check out the *cpp-version* branch. If you have any request, idea or suggestion, feel free to contact me :) 
 
+<p align="center">
+  <img src="/screenshots/demo_ROPGenerator.gif" width="650" align="middle">
+</p>
+
 Overview
 --------
 ROPGenerator uses the tool ROPgadget (https://github.com/JonathanSalwan/ROPgadget) to extract gadgets from binaries and the barf-project (https://github.com/programa-stic/barf-project) to disassembly them. After gadgets are extracted, it analyzes them in order to compute their semantic and stores them according to their usefullness. Once the analysis is done, you can request ROPGenerator to automatically find gadgets or ROP chains by supplying semantic queries. 
