@@ -189,8 +189,6 @@ def load(args):
                 if( not closed_ok ):
                     error("ROPgadget options: missing closing \'")
                     return 
-            # DEBUG 
-            print("Got options: " + ropgadget_options )
             i = j+1
             
         elif( args[i] in [OPTION_HELP, OPTION_HELP_SHORT] ):
