@@ -90,7 +90,10 @@ def getGadgets(filename, extra_args=''):
     ropgadget = "ROPgadget"
     notify("Executing ROPgadget as: " + ropgadget)
     try:
-        p = subprocess.Popen([ropgadget,"--binary",filename, "--dump", "--all"]+extra_args.split(" "),stdout=subprocess.PIPE)
+        cmd = [ropgadget,"--binary",filename, "--dump", "--all"]
+        if( extra_args ):
+            cmd += extra_args.split(" ")
+        p = subprocess.Popen(cmd,stdout=subprocess.PIPE)
     except Exception as e:
         error("Could not execute '" +ropgadget+ " --binary " + filename + " --dump --all'" + extra_args)
         print("\tError message is: " + str(e))
